@@ -10,6 +10,13 @@
     display: none;
   }
 
+  .footer-text {
+    * > {
+      display: inline-block;
+      margin-right: $ksi-margin-small;
+    }
+  }
+
   .version {
     cursor: pointer;
   }
