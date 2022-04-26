@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 4px solid $ksi-page-welcome-banner-bg;
+    border-bottom: 4px solid $ksi-blue-100;
 
     @media screen and (max-width: $ksi-max-small-mobile-width) {
       flex-direction: column;
