@@ -77,17 +77,23 @@
       gap: $ksi-margin-x-small;
     }
 
-    .picture {
-      max-width: 100vw;
+    .map-image {
+      max-width: 90%;
+      margin-bottom: $ksi-margin-x-small;
+    }
+    .schedule-image {
+      max-width: 90%;
       margin-bottom: $ksi-margin-x-small;
     }
 
     h1, h2 {
       font-size: 1.3em;
+      width: 90%;
     }
 
     p {
       font-size: 1em;
+      width: 90%;
       padding: 0 $ksi-padding-x-small;
     }
   }
