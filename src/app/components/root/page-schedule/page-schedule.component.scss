@@ -1,13 +1,81 @@
+
 @import "src/app/styles/vars";
 @import "src/app/styles/mixins";
 
 :host {
+  width: 100%;
   display: flex;
   justify-content: center;
 
-  > article {
-    @include ksi-full-width;
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 27cm;
     margin: $ksi-margin;
+    padding: $ksi-padding;
+    background-color: $ksi-page-welcome-banner-bg;
+    border-radius: $ksi-radius;
+    box-sizing: border-box;
+
+    h1, h2 {
+      text-align: center;
+      color: $ksi-header-fg;
+      margin-bottom: $ksi-margin;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: $ksi-margin;
+      color: $ksi-page-fg;
+      font-size: 1.1rem;
+    }
+
+    .schedule-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $ksi-margin;
+      width: 100%;
+      margin-bottom: $ksi-margin;
+
+      .picture {
+        @include round-corner;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        margin-bottom: $ksi-margin-small;
+      }
+    }
+  }
+
+  @media screen and (max-width: $ksi-max-mobile-width) {
+    .schedule {
+      max-width: 100vw;
+      margin: $ksi-margin-small;
+      padding: $ksi-padding-small;
+
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .schedule-container {
+        flex-direction: column;
+        align-items: center;
+        gap: $ksi-margin-small;
+
+        .picture {
+          width: 100%;
+          max-width: 100vw;
+          height: auto;
+        }
+      }
+    }
   }
 }
 
